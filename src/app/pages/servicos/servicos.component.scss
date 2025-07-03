@@ -1,0 +1,140 @@
+.first-section {
+  display: flex;
+  flex-direction: row;
+  background-color: #245b8d;
+  color: white;
+
+  .text-first-section {
+    text-align: start;
+    padding-left: 50px;
+
+    p {
+      max-width: 1100px;
+      padding-left: 70px;
+    }
+  }
+  img {
+    width: 800px;
+    padding: 40px;
+  }
+}
+
+
+.second-section{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 50px;
+
+  .cartao {
+    text-align: center;
+    p {
+      max-width: 400px;
+    }
+
+    img {
+      padding-top: 20px;
+    }
+  }
+}
+
+.third-section{
+  display: flex;
+  justify-content:start;
+  padding-left: 200px;
+  padding-top: 80px;
+  .body-text {
+    max-width: 800px;
+    padding-top: 80px;
+  }
+    .body-text2 {
+    max-width: 1000px;
+    padding-top: 80px;
+  }
+}
+
+.fourth-section {
+  background-color: #245b8d;
+  .icons {
+      display: flex;
+  justify-content: space-evenly;
+  padding: 40px;
+  }
+  a {
+      text-decoration: none;
+      color: white;
+      background-color:  #3F8EFC;
+  }
+
+  .box-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+
+    img {
+      padding-bottom: 10px;
+    }
+  }
+}
+
+.fifth-section {
+  .body-cards {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px;
+    p {
+        max-width: 500px;
+    }
+  }
+
+  .on-header{
+    h4 {
+     padding-top: 20px;
+     padding-left: 80px;
+    }
+    h2 {
+      padding-left: 50px;
+    }
+
+  }
+}
+
+.box-icon a:hover{
+  transition: 0.5s;
+  background-color: rgb(80, 121, 182);
+}
+
+@media (width <= 1161px) {
+  .first-section {
+    flex-direction: column;
+  }
+  .second-section {
+      display: grid;
+      grid-template-columns: 1fr;
+  }
+  .third-section {
+   padding-left: 20px; 
+  }
+
+}
+
+@media (width <= 491px) {
+  .fourth-section {
+    
+    .icons {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .box-icon {
+      padding: 20px;
+    }
+  }
+  .fifth-section {
+  
+    .body-cards {
+          display: flex;
+    flex-direction: column;
+    }
+  }
+}
