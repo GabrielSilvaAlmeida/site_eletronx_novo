@@ -3,6 +3,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ServicosComponent } from './pages/servicos/servicos.component';
 import { SobreComponent } from './pages/sobre/sobre.component';
 import { HemodinamicaComponent } from './pages/hemodinamica/hemodinamica.component';
+import { ProdutosComponent } from './pages/produtos/produtos.component';
 
 export const routes: Routes = [
 
@@ -15,6 +16,9 @@ export const routes: Routes = [
       },
       {
             path: 'hemodinamica', component: HemodinamicaComponent
+      },
+      {
+            path: 'produtos', component: ProdutosComponent
       }
     
 ];

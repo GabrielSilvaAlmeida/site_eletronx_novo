@@ -72,18 +72,49 @@
   flex-direction: row;
   color: black;
 
+  p {
+    padding-right: 20px;
+  }
+
+  .group-check-list {
+    display: flex;
+    flex-direction: column;
+
+  }
+  .check-list{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    p {
+         padding-left: 20px;
+         max-width: 390px;
+    }
+    img {
+      max-width: 20px;
+      padding-bottom: 30px;
+   
+    }
+  }
+
   .text-first-section {
     text-align: start;
     padding-left: 50px;
+    padding-top: 30px;
+    h2 {
+      padding-bottom: 20px;
+    }
 
     p {
-      max-width: 1000px;
+      text-align: justify;
+      max-width: 800px;
       padding-left: 70px;
     }
   }
   img {
     width: 600px;
-    padding: 40px;
+  
 
   }
 }
@@ -154,6 +185,10 @@
   }
     .fourth-section {
     flex-direction: column;
+
+    .text-first-section{
+      display: none;
+    }
   }
 
   .fifth-section{
