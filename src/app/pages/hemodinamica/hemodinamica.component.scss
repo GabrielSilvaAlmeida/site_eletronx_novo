@@ -69,7 +69,7 @@
 
 .fourth-section {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   color: black;
 
   p {
@@ -79,7 +79,14 @@
   .group-check-list {
     display: flex;
     flex-direction: column;
+    padding-left: 40px;
+ 
 
+  }
+
+  .group-cv20{
+    display: flex;
+    justify-content: space-evenly;
   }
   .check-list{
 
@@ -168,6 +175,7 @@
   }
 }
 
+
 @media (width <= 1161px) {
   .innova {
     display: flex;
@@ -175,22 +183,22 @@
   }
   .first-section {
     flex-direction: column;
-
+    
   }
-    .second-section {
+  .second-section {
     flex-direction: column;
   }
-    .third-section {
+  .third-section {
     flex-direction: column;
   }
-    .fourth-section {
+  .fourth-section {
     flex-direction: column;
 
     .text-first-section{
       display: none;
     }
   }
-
+  
   .fifth-section{
     .image-body{
       max-width: 100%;
@@ -199,15 +207,23 @@
       border-radius: 0;
     }
   }
-   .sixth-section {
- .icons {
-   display: flex;
-   flex-direction: column;
-
- }
-
+  .sixth-section {
+    .icons {
+      display: flex;
+      flex-direction: column;
+      
+    }
+    
     .box-icon {
       padding: 20px;
     }
+  }
+}
+@media (width <= 900px) {
+  .fourth-section{
+    .group-cv20{
+    display: flex;
+    flex-direction: column;
+  }
   }
 }

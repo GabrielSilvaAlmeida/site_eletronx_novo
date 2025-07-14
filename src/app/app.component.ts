@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './fragments/header/header.component';
+import { isPlatformBrowser } from '@angular/common';
+import Aos from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -11,4 +12,12 @@ import { HeaderComponent } from './fragments/header/header.component';
 })
 export class AppComponent {
   title = 'eletronx_site';
+
+   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
+  ngOnInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      Aos.init();
+    }
+  }
 }

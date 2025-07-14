@@ -1,7 +1,7 @@
 <app-header></app-header>
 <main>
     <section class="first-section">
-        <div class="text-first-section pt-5">
+        <div class="text-first-section pt-5" >
             <h2>EletronX: Excelência em Hemodinâmica, Equipamentos Médicos</h2>
             <p class="pt-3">Com mais de uma décadas de experiência e compromisso com a qualidade, a EletronX se
                 consolidou como uma
@@ -12,7 +12,7 @@
         </div>
         <div class="img-fluid">
 
-            <img class="img-fluid" src="/assets/img/publicidade_1.png" alt="">
+            <img class="img-fluid" src="/assets/img/publicidade_1.png" alt="Assistência Técnica Especializada">
         </div>
     </section>
 
@@ -50,13 +50,13 @@
         <div class="body-two">
             <div class="insignia text-center">
                 <img src="/assets/img/Insignia.png" alt="">
-                <h4>+340</h4>
+                <h4 #contador>+ {{numero}}</h4>
                 <p>Avaliações</p>
             </div>
 
             <div class="hospital text-center">
                 <img src="/assets/img/Hospital_icon.png" alt="">
-                <h4>+40</h4>
+                <h4 #contador>+{{numero2}}</h4>
                 <p>Hospitais Atendidos</p>
             </div>
         </div>
@@ -65,34 +65,35 @@
     <section class="fourth-section pt-5">
         <div class="text-banner">
             <h2>Manutenção Técnica com Garantia de Qualidade</h2>
-            <p class="pt-5">Sabemos que a manutenção dos equipamentos médicos é fundamental para o funcionamento seguro e eficiente
-                de qualquer unidade de saúde. Por isso, a EletronX investe continuamente em capacitação técnica,
-                laboratórios equipados e ferramentas de última geração para oferecer um serviço de manutenção altamente
-                qualificado.
-                A empresa realiza manutenção preventiva, corretiva e preditiva, além de atualizações de software e
-                calibrações conforme normas técnicas e exigências da Anvisa. Tudo isso com rapidez, transparência e
-                suporte técnico especializado, assegurando a continuidade dos serviços médicos e evitando interrupções
-                que possam comprometer a saúde dos pacientes.</p>
+      <p>
+  {{ mostrarTextoCompleto ? textoCompleto : textoReduzido }}
+  <span *ngIf="mostrarBotaoToggle" (click)="alternarTexto()" style="color: rgb(255, 255, 255); cursor: pointer;">
+    {{ mostrarTextoCompleto ? ' Ler menos' : '... Ler mais' }}
+  </span>
+</p>
         </div>
-        <img class="img-fluid" src="/assets/img/cirurgia_publicidade_no_text.png" alt="">
+        <picture>
+          <source media="(max-width: 1200px)" class="another-image img-fluid "srcset="assets/img/OurService.jpg">
+          <img width="1200px" src="assets/img/cirurgia_publicidade_no_text.png" alt="Imagem Responsiva">
+        </picture>
     </section>
 
     <section class="fifth-section p-5">
         <div class="img-fluid cartao rounded-2 p-4 text-center">
             <img src="/assets/img/Eye.png" alt="">
-            <p class="pt-3">Soluções tecnológicas avançadas para diagnósticos confiáveis. Com performance validada.</p>
+            <p class="pt-3" data-aos="fade-down"data-aos-duration="1000">Soluções tecnológicas avançadas para diagnósticos confiáveis. Com performance validada.</p>
         </div>
          <div class="img-fluid cartao rounded-2 p-4 text-center">
             <img src="/assets/img/Innovation.png" alt="">
-            <p class="pt-3">Mais de 20 anos de experiência no setor de hemodinâmica e tecnologia médica.</p>
+            <p class="pt-3" data-aos="fade-down"data-aos-duration="1000">Mais de 20 anos de experiência no setor de hemodinâmica e tecnologia médica.</p>
         </div>
          <div class="img-fluid cartao rounded-2 p-4 text-center">
             <img src="/assets/img/Surgery.png" alt="">
-            <p class="pt-3">Equipamentos essenciais para o cuidado intensivo e procedimentos de alta complexidade.</p>
+            <p class="pt-3" data-aos="fade-down" data-aos-duration="1000">Equipamentos essenciais para o cuidado intensivo e procedimentos de alta complexidade.</p>
         </div>
          <div class="img-fluid cartao rounded-2 p-4 text-center">
             <img src="/assets/img/HospitalWagon.png" alt="">
-            <p class="pt-3">Nossa logística e suporte técnico alcançam todo o território nacional.</p>
+            <p class="pt-3" data-aos="fade-down" data-aos-duration="1000">Nossa logística e suporte técnico alcançam todo o território nacional.</p>
         </div>
     </section>
 

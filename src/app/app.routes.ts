@@ -4,8 +4,14 @@ import { ServicosComponent } from './pages/servicos/servicos.component';
 import { SobreComponent } from './pages/sobre/sobre.component';
 import { HemodinamicaComponent } from './pages/hemodinamica/hemodinamica.component';
 import { ProdutosComponent } from './pages/produtos/produtos.component';
+import { PoliticaComponent } from './pages/politica/politica.component';
 
 export const routes: Routes = [
+
+      {
+            path: '', redirectTo: 'home',
+            pathMatch: 'full'
+      },
 
       { path: 'home', component: HomeComponent },
       {
@@ -19,6 +25,9 @@ export const routes: Routes = [
       },
       {
             path: 'produtos', component: ProdutosComponent
+      },
+      {
+            path: 'termos', component: PoliticaComponent
       }
     
 ];

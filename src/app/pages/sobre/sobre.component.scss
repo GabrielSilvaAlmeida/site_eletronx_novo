@@ -1,0 +1,29 @@
+.first-section {
+    padding-top: 50px;
+    .apresentacao {
+        display: flex;
+        justify-content: space-evenly;
+      
+        .body-texto {
+            padding-top: 20px;
+          h2 {
+            padding-bottom: 20px;
+              text-align: center;
+          }
+         
+          text-align: justify;
+            max-width: 700px;
+        }
+    }
+}
+
+
+
+@media (width <= 1116px) {
+    .apresentacao {
+        display: flex;
+        flex-direction: column;
+
+        padding: 20px;
+    }
+}

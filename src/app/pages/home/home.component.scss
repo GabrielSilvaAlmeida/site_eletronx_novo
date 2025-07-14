@@ -60,10 +60,13 @@
 
 
 .fourth-section {
+
+ 
     img {
         margin: 0;
     padding: 0;
     width: 100%;
+
     }
 
     .text-banner{
@@ -77,6 +80,8 @@
             padding-left: 70px;
         }
     }
+
+ 
 }
 
 .fifth-section {
@@ -92,6 +97,82 @@
     }
 }
 
+
+@media (width <= 1200px) {
+    
+  .fourth-section{
+    .text-banner{
+        position: absolute;
+        color: white;
+        max-width: 800px;
+        padding-left: 50px;
+        padding-top: 800px;
+
+        p{
+            padding-left: 70px;
+        }
+    }
+  }
+}
+
+
+@media (width <= 671px) {
+    
+  .fourth-section{
+    .text-banner{
+        position: absolute;
+        color: white;
+        max-width: 800px;
+        padding-left: 50px;
+        padding-top: 700px;
+
+        p{
+            padding-left: 70px;
+        }
+    }
+  }
+}
+
+
+@media (width <= 587px) {
+    
+  .fourth-section{
+    background-color: #04508e;
+    padding-bottom: 400px;
+ 
+    .text-banner{
+        position: absolute;
+        color: white;
+        max-width: 800px;
+        padding-left: 50px;
+        padding-top:470px;
+
+        p{
+            padding-left: 70px;
+        }
+    }
+  }
+}
+
+@media (width <= 414px) {
+    
+  .fourth-section{
+    background-color: #04508e;
+    padding-bottom: 400px;
+ 
+    .text-banner{
+        position: absolute;
+        color: white;
+        max-width: 800px;
+        padding-left: 50px;
+        padding-top:380px;
+
+        p{
+            padding-left: 70px;
+        }
+    }
+  }
+}
 
 
 @media (width <= 1161px) {
