@@ -3,6 +3,10 @@
   flex-direction: row;
   background-color: #245b8d;
   color: white;
+  
+    .one-img{
+      border-radius: 50px;
+    }
 
   .text-first-section {
     text-align: start;
@@ -16,6 +20,7 @@
   img {
     width: 800px;
     padding: 40px;
+    
   }
 }
 
