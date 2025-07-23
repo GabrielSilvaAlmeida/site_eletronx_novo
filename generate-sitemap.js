@@ -58,7 +58,7 @@ var sitemap_1 = require("sitemap");
                 return [4 /*yield*/, (0, sitemap_1.streamToPromise)(smStream).then(function (data) { return data.toString(); })];
             case 1:
                 sitemap = _a.sent();
-                (0, fs_1.writeFileSync)('./dist/browser/eletronx-site/sitemap.xml', sitemap);
+                (0, fs_1.writeFileSync)('./dist/eletronx_site/browser/sitemap.xml', sitemap);
                 return [2 /*return*/];
         }
     });

@@ -1,5 +1,6 @@
-import { writeFileSync } from 'fs';
+import { writeFileSync, mkdirSync, existsSync } from 'fs';
 import { SitemapStream, streamToPromise } from 'sitemap';
+import { dirname } from 'path';
 
 (async () => {
   const smStream = new SitemapStream({ hostname: 'https://eletronx.com' });
@@ -12,12 +13,21 @@ import { SitemapStream, streamToPromise } from 'sitemap';
     '/politica',
     '/sobre',
     '/produtos',
-    
   ];
 
   routes.forEach(route => smStream.write({ url: route, changefreq: 'weekly', priority: 0.8 }));
   smStream.end();
 
   const sitemap = await streamToPromise(smStream).then(data => data.toString());
-  writeFileSync('./dist/browser/eletronx-site/sitemap.xml', sitemap);
+
+  const outputPath = './dist/eletronx_site/browser/sitemap.xml';
+
+  // cria a pasta se não existir
+  const outputDir = dirname(outputPath);
+  if (!existsSync(outputDir)) {
+    mkdirSync(outputDir, { recursive: true });
+  }
+
+  writeFileSync(outputPath, sitemap);
+  console.log('✅ Sitemap gerado em:', outputPath);
 })();
