@@ -20,7 +20,7 @@ import { dirname } from 'path';
 
   const sitemap = await streamToPromise(smStream).then(data => data.toString());
 
-  const outputPath = './src/assets/sitemap.xml';
+  const outputPath = './src/sitemap.xml';
 
   // cria a pasta se não existir
   const outputDir = dirname(outputPath);
