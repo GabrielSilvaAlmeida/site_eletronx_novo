@@ -5,8 +5,9 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test","sitemap": "tsc -p tsconfig.sitemap.json && node dist/eletronx_site/browser/generate-sitemap.js",
+    "watch": "ng build --watch --configuration development && tsc -p tsconfig.sitemap.json && ng run sitemap && ng run sitemap",
+    "test": "ng test",
+    "sitemap": "tsc -p tsconfig.sitemap.json && node dist/eletronx_site/browser/generate-sitemap.js",
     "serve:ssr:eletronx_site": "node dist/eletronx_site/server/server.mjs"
   },
   "private": true,
